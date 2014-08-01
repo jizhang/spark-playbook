@@ -1,3 +1,6 @@
 ---
-- name: test connection
-  ping:
+- name: install oracle jdk7
+  unarchive: src=/opt/jdk-7u45-linux-x64.gz dest=/usr/lib/jvm/ creates=/usr/lib/jvm/jdk1.7.0_45
+
+- name: install scala 2.10
+  unarchive: src=/opt/scala-2.10.3.tgz dest=/opt/ creates=/opt/scala-2.10.3
