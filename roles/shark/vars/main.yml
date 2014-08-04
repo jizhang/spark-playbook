@@ -1,0 +1,4 @@
+---
+shark_home: /opt/shark-0.9.1
+
+spark_mem: 16g

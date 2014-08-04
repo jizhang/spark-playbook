@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 export JAVA_HOME={{ java_home }}
 export SCALA_HOME={{ scala_home }}
@@ -8,3 +8,5 @@ export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:/opt/cloudera/parcels/HADOOP_LZO/l
 
 export SPARK_WORKER_CORES={{ spark_worker_cores }}
 export SPARK_WORKER_MEMORY={{ spark_worker_memory }}
+
+export SPARK_MASTER_IP={{ spark_master_ip }}

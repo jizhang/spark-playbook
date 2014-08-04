@@ -1,0 +1,6 @@
+---
+- name: install shark
+  unarchive: src=/opt/downloads/shark-0.9.1.tar.gz dest=/opt/ creates={{ shark_home }} copy=no
+
+- name: config conf/shark-env.sh
+  template: src=shark-env.sh.j2 dest={{ shark_home }}/conf/shark-env.sh mode=0755
