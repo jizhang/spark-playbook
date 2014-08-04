@@ -1,0 +1,5 @@
+---
+spark_home: /opt/spark-0.9.1-bin-cdh4
+
+spark_worker_cores: 8
+spark_worker_memory: 16g

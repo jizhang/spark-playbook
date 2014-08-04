@@ -1,3 +1,9 @@
 ---
 - name: install spark
-  ping:
+  unarchive: src=/opt/downloads/spark-0.9.1-bin-cdh4.tgz dest=/opt/ creates={{ spark_home }} copy=no
+
+- name: config conf/spark_env.sh
+  template: src=spark-env.sh.j2 dest={{ spark_home }}/conf/spark-env.sh mode=0755
+
+- name: config conf/slaves
+  template: src=slaves.j2 dest={{ spark_home }}/conf/slaves

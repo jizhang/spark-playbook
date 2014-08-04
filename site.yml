@@ -2,3 +2,4 @@
 - hosts: spark
   roles:
     - common
+    - spark
