@@ -2,6 +2,7 @@
 
 export JAVA_HOME={{ java_home }}
 export SCALA_HOME={{ scala_home }}
+export SPARK_HOME={{ spark_home }}
 
 export SPARK_CLASSPATH=$SPARK_CLASSPATH:/opt/cloudera/parcels/HADOOP_LZO/lib/hadoop/lib/*
 export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:/opt/cloudera/parcels/HADOOP_LZO/lib/hadoop/lib/native
@@ -11,4 +12,4 @@ export SPARK_WORKER_MEMORY={{ spark_worker_memory }}
 
 export SPARK_MASTER_IP={{ spark_master_ip }}
 
-export HADOOP_CONF_DIR=/etc/hadoop/conf
+export DEFAULT_HADOOP_HOME=/opt/cloudera/parcels/CDH/lib/hadoop
