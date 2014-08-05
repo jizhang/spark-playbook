@@ -1,0 +1,4 @@
+[program:sharkserver2]
+command = {{ shark_home }}/bin/shark --service sharkserver2
+stdout_logfile = {{ shark_home }}/logs/sharkserver2.log
+redirect_stderr = true

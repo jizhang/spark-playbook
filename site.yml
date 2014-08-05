@@ -4,3 +4,7 @@
     - common
     - spark
     - shark
+
+- hosts: sharkserver2
+  roles:
+    - sharkserver2

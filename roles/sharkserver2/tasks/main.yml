@@ -1,0 +1,6 @@
+---
+- name: install supervisor
+  apt: name=supervisor
+
+- name: config supervisor
+  template: src=sharkserver2.conf.j2 dest=/etc/supervisor/conf.d/sharkserver2.conf
