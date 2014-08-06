@@ -1,7 +1,3 @@
-[all:children]
-spark_master
-spark_slave
-
 [spark_master]
 dw20-004
 

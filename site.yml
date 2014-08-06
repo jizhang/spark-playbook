@@ -1,15 +1,13 @@
 ---
-- hosts: all
-  roles:
-    - common
-
 - hosts: spark_master
   roles:
+    - common
     - spark
     - shark
     - sharkserver2
 
 - hosts: spark_slave
   roles:
+    - common
     - spark
     - shark
