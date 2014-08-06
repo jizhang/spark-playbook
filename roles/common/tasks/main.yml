@@ -9,6 +9,6 @@
   unarchive: src=/opt/downloads/scala-2.10.3.tgz dest=/opt/ creates={{ scala_home }} copy=no
 
 - name: ssh public key
-  authorized_key: user=root key={{ item }}
+  authorized_key: user=root key="{{ item }}"
   with_file:
     - root.pub
