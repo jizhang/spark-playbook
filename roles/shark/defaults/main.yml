@@ -1,2 +1,4 @@
 ---
 sharkserver2: false
+
+spark_mem: 12g
