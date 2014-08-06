@@ -10,3 +10,7 @@ db20-046
 db20-047
 db20-048
 db20-049
+
+[spark_all:children]
+spark_master
+spark_slave
