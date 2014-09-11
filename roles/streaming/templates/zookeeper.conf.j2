@@ -1,6 +1,8 @@
 [program:zookeeper]
-command = {{ java_home }}/bin/java -Dzookeeper.log.dir=. -Dzookeeper.root.logger=INFO,CONSOLE
- -cp "{{ zookeeper_classpath|join(':') }}"
- org.apache.zookeeper.server.quorum.QuorumPeerMain {{ zookeeper_home }}/conf/zoo.cfg
-stdout_logfile = {{ zookeeper_data }}/zookeeper.log
-redirect_stderr = true
+command={{ java_home }}/bin/java -Dzookeeper.log.dir=. -Dzookeeper.root.logger=INFO,CONSOLE
+  -cp "{{ zookeeper_classpath|join(':') }}"
+  org.apache.zookeeper.server.quorum.QuorumPeerMain {{ zookeeper_home }}/conf/zoo.cfg
+autostart=true
+autorestart=true
+stdout_logfile={{ zookeeper_data }}/zookeeper.log
+redirect_stderr=true
