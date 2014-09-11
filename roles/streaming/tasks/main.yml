@@ -1,4 +1,17 @@
 ---
+- name: config resolv.conf
+  lineinfile: dest=/etc/resolv.conf line={{ item }}
+  with_items:
+    - nameserver 10.20.3.75
+    - search i.ajkdns.com
+
+- name: config hosts
+  lineinfile: dest=/etc/hosts line={{ item }}
+  with_items:
+    - 10.20.8.80 db20-050
+    - 10.20.8.81 db20-051
+    - 10.20.8.82 db20-052
+
 - include: zookeeper.yml
 
 - include: kafka.yml
