@@ -8,6 +8,9 @@
 - name: config zookeeper
   template: src=zoo.cfg.j2 dest={{ zookeeper_home }}/conf/zoo.cfg
 
+- name: config myid
+  template: src=myid.j2 dest={{ zookeeper_data }}/myid
+
 - name: install supervisor
   apt: name=supervisor
 
