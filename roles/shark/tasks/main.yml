@@ -5,6 +5,5 @@
 - name: config conf/shark-env.sh
   template: src=shark-env.sh.j2 dest={{ shark_home }}/conf/shark-env.sh mode=0755
 
-- name: sharkserver2
-  include: sharkserver2.yml
+- include: sharkserver2.yml
   when: sharkserver2

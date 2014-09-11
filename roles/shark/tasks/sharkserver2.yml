@@ -4,3 +4,6 @@
 
 - name: config supervisor
   template: src=sharkserver2.conf.j2 dest=/etc/supervisor/conf.d/sharkserver2.conf
+
+- name: create log directory
+  file: path={{ shark_home }}/logs state=directory

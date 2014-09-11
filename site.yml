@@ -4,3 +4,8 @@
     - common
     - spark
     - shark
+
+- hosts: streaming
+  roles:
+    - common
+    - streaming

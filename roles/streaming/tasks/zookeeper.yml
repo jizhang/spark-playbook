@@ -1,0 +1,15 @@
+---
+- name: install zookeeper
+  unarchive: src=/opt/downloads/zookeeper-3.4.6.tar.gz dest=/opt/ creates={{ zookeeper_home }} copy=no
+
+- name: create zookeeper data directory
+  file: path={{ zookeeper_data }} state=directory
+
+- name: config zookeeper
+  template: src=zoo.cfg.j2 dest={{ zookeeper_home }}/conf/zoo.cfg
+
+- name: install supervisor
+  apt: name=supervisor
+
+- name: config supervisor
+  template: src=zookeeper.conf.j2 dest=/etc/supervisor/conf.d/zookeeper.conf

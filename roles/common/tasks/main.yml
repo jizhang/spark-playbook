@@ -1,4 +1,10 @@
 ---
+- name: create directories
+  file: path={{ item }} state=directory
+  with_items:
+    - /opt
+    - /usr/lib/jvm
+
 - name: rsync /opt/downloads
   synchronize: src=/opt/downloads dest=/opt/
 
