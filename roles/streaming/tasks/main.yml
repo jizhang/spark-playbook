@@ -12,6 +12,9 @@
     - 10.20.8.81 db20-051
     - 10.20.8.82 db20-052
 
+- name: config ntpdate
+  cron: name=ntpdate minute=*/5 job="/usr/sbin/ntpdate 10.10.6.130"
+
 - include: zookeeper.yml
 
 - include: kafka.yml
