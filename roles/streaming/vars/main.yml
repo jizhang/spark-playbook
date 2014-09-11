@@ -1,5 +1,13 @@
 ---
 zookeeper_home: /opt/zookeeper-3.4.6
 zookeeper_data: /data/zookeeper
+zookeeper_classpath:
+  - {{ zookeeper_home }}/lib/slf4j-log4j12-1.6.1.jar
+  - {{ zookeeper_home }}/lib/slf4j-api-1.6.1.jar
+  - {{ zookeeper_home }}/lib/netty-3.7.0.Final.jar
+  - {{ zookeeper_home }}/lib/log4j-1.2.16.jar
+  - {{ zookeeper_home }}/lib/jline-0.9.94.jar
+  - {{ zookeeper_home }}/zookeeper-3.4.6.jar
+  - {{ zookeeper_home }}/conf"
 
 kafka_home: /opt/kafka_2.10-0.8.1.1

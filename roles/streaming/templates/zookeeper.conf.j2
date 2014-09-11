@@ -1,12 +1,6 @@
 [program:zookeeper]
 command = {{ java_home }}/bin/java -Dzookeeper.log.dir=. -Dzookeeper.root.logger=INFO,CONSOLE
- -cp "{{ zookeeper_home }}/lib/slf4j-log4j12-1.6.1.jar
-     :{{ zookeeper_home }}/lib/slf4j-api-1.6.1.jar
-     :{{ zookeeper_home }}/lib/log4j-1.2.16.jar
-     :{{ zookeeper_home }}/lib/netty-3.7.0.Final.jar
-     :{{ zookeeper_home }}/lib/jline-0.9.94.jar
-     :{{ zookeeper_home }}/zookeeper-3.4.6.jar
-     :{{ zookeeper_home }}/conf"
+ -cp "{{ zookeeper_classpath|join(':') }}"
  org.apache.zookeeper.server.quorum.QuorumPeerMain {{ zookeeper_home }}/conf/zoo.cfg
 stdout_logfile = {{ zookeeper_data }}/zookeeper.log
 redirect_stderr = true
