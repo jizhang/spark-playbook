@@ -10,9 +10,3 @@
 
 - name: config myid
   template: src=myid.j2 dest={{ zookeeper_data }}/myid
-
-- name: install supervisor
-  apt: name=supervisor
-
-- name: config supervisor
-  template: src=zookeeper.conf.j2 dest=/etc/supervisor/conf.d/zookeeper.conf
