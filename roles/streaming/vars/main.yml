@@ -26,4 +26,4 @@ kafka_classpath:
   - "{{ kafka_home }}/libs/snappy-java-1.0.5.jar"
   - "{{ kafka_home }}/libs/zkclient-0.3.jar"
   - "{{ kafka_home }}/libs/zookeeper-3.3.4.jar"
-  - "{{ kafka_home }}/config/log4j.properties"
+  - "{{ kafka_home }}/config"
