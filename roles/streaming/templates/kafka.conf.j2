@@ -1,0 +1,8 @@
+[program:kafka]
+command={{ java_home }}/bin/java -server -Xmx4G
+  -cp "{{ kafka_classpath|join(':') }}"
+  kafka.Kafka {{ kafka_home }}/config/server.properties
+autostart=true
+autorestart=true
+stdout_logfile={{ kafka_log }}/kafka.log
+redirect_stderr=true

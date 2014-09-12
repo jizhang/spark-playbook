@@ -1,0 +1,9 @@
+broker.id={{ kafka_id }}
+log.dirs={{ kafka_dirs|join(',') }}
+port=9092
+zookeeper.connect={% for host in groups['zookeeper'] %}{{ host }}:2181{% if not loop.last %},{% endif %}{% endfor %}{{ kafka_zkroot }}
+
+num.partitions=1
+default.replication.factor=3
+
+log.retention.hours=168

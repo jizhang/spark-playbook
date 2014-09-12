@@ -11,3 +11,18 @@ zookeeper_classpath:
   - "{{ zookeeper_home }}/conf"
 
 kafka_home: /opt/kafka_2.10-0.8.1.1
+kafka_log: /data/kafka
+kafka_zkroot: /kafka
+zookeeper_classpath:
+  - "{{ kafka_home }}/libs/jopt-simple-3.2.jar"
+  - "{{ kafka_home }}/libs/kafka_2.10-0.8.1.1-javadoc.jar"
+  - "{{ kafka_home }}/libs/kafka_2.10-0.8.1.1-scaladoc.jar"
+  - "{{ kafka_home }}/libs/kafka_2.10-0.8.1.1-sources.jar"
+  - "{{ kafka_home }}/libs/kafka_2.10-0.8.1.1.jar"
+  - "{{ kafka_home }}/libs/log4j-1.2.15.jar"
+  - "{{ kafka_home }}/libs/metrics-core-2.2.0.jar"
+  - "{{ kafka_home }}/libs/scala-library-2.10.1.jar"
+  - "{{ kafka_home }}/libs/slf4j-api-1.7.2.jar"
+  - "{{ kafka_home }}/libs/snappy-java-1.0.5.jar"
+  - "{{ kafka_home }}/libs/zkclient-0.3.jar"
+  - "{{ kafka_home }}/libs/zookeeper-3.3.4.jar"

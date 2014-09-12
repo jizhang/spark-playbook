@@ -1,2 +1,8 @@
 ---
 zookeeper_id: 2
+
+kafka_id: 2
+kafka_dirs:
+  - /hadoop1/kafka
+  - /hadoop2/kafka
+  - /hadoop3/kafka

@@ -1,5 +1,5 @@
 [program:zookeeper]
-command={{ java_home }}/bin/java -Dzookeeper.log.dir=. -Dzookeeper.root.logger=INFO,CONSOLE
+command={{ java_home }}/bin/java -server -Xmx2G
   -cp "{{ zookeeper_classpath|join(':') }}"
   org.apache.zookeeper.server.quorum.QuorumPeerMain {{ zookeeper_home }}/conf/zoo.cfg
 autostart=true
