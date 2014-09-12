@@ -3,7 +3,10 @@
   unarchive: src=/opt/downloads/kafka_2.10-0.8.1.1.tgz dest=/opt/ creates={{ kafka_home }} copy=no
 
 - name: config kafka
-  template: src=server.properties.j2 dest={{ kafka_home }}/config/server.properties
+  template: src=kafka-server.properties.j2 dest={{ kafka_home }}/config/server.properties
+
+- name: config kafka log4j
+  template: src=kafka-log4j.properties.j2 dest={{ kafka_home }}/config/log4j.properties
 
 - name: create kafka log dir
   file: path={{ kafka_log }} state=directory
@@ -13,4 +16,4 @@
   with_items: kafka_dirs
 
 - name: config supervisor
-  template: src=kafka.conf.j2 dest=/etc/supervisor/conf.d/kafka.conf
+  template: src=kafka-supervisor.conf.j2 dest=/etc/supervisor/conf.d/kafka.conf

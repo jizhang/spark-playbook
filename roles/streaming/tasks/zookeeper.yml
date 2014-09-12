@@ -6,7 +6,7 @@
   file: path={{ zookeeper_data }} state=directory
 
 - name: config zookeeper
-  template: src=zoo.cfg.j2 dest={{ zookeeper_home }}/conf/zoo.cfg
+  template: src=zookeeper-zoo.cfg.j2 dest={{ zookeeper_home }}/conf/zoo.cfg
 
 - name: config myid
-  template: src=myid.j2 dest={{ zookeeper_data }}/myid
+  template: src=zookeeper-myid.j2 dest={{ zookeeper_data }}/myid
