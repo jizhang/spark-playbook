@@ -19,5 +19,9 @@
   apt: name=supervisor
 
 - include: zookeeper.yml
+  when: "inventory_hostname in groups['zookeeper']"
 
 - include: kafka.yml
+  when: "inventory_hostname in groups['kafka']"
+
+- include: spark.xml
