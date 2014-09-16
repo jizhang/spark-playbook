@@ -24,4 +24,4 @@
 - include: kafka.yml
   when: "inventory_hostname in groups['kafka']"
 
-- include: spark.xml
+- include: spark.yml
