@@ -28,7 +28,7 @@ kafka_classpath:
   - "{{ kafka_home }}/libs/zookeeper-3.3.4.jar"
   - "{{ kafka_home }}/config"
 
-spark_home: /opt/spark-1.0.2-bin-cdh4
+spark_home: /opt/spark-1.1.0-bin-cdh4
 spark_master_ip: db20-050
 spark_worker_cores: 8
 spark_worker_memory: 16g
