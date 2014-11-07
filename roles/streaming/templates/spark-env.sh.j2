@@ -14,3 +14,5 @@ export SPARK_MASTER_WEBUI_PORT=8079
 export SPARK_WORKER_WEBUI_PORT=8078
 
 #export DEFAULT_HADOOP_HOME=/opt/cloudera/parcels/CDH/lib/hadoop
+
+SPARK_WORKER_OPTS="-Dspark.executor.logs.rolling.strategy=time -Dspark.executor.logs.rolling.time.interval=daily -Dspark.executor.logs.rolling.maxRetainedFiles=3"
