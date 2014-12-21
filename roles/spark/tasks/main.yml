@@ -1,6 +1,6 @@
 ---
 - name: install spark
-  unarchive: src=/opt/downloads/spark-0.9.1-bin-cdh4.tgz dest=/opt/ creates={{ spark_home }} copy=no
+  unarchive: src=/opt/downloads/spark-1.2.0-bin-cdh4.tgz dest=/opt/ creates={{ spark_home }} copy=no
 
 - name: config sbin/spark-config.sh
   template: src=spark-config.sh.j2 dest={{ spark_home }}/sbin/spark-config.sh mode=0755
@@ -10,3 +10,6 @@
 
 - name: config conf/slaves
   template: src=slaves.j2 dest={{ spark_home }}/conf/slaves
+
+- name: link conf/hive-site.xml
+  file: src=/etc/hive/conf/hive-site.xml dest={{ spark_home }}/conf/hive-site.xml state=link
