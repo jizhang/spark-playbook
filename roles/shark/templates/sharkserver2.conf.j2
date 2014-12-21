@@ -1,10 +1,7 @@
 [program:sharkserver2]
-command={{ spark_home }}/bin/spark-submit
-  --master spark://{{ spark_master_ip }}:7077
-  --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2
-  {{ spark_home }}/lib/spark-assembly-1.2.0-hadoop2.0.0-mr1-cdh4.2.0.jar
+command={{ shark_home }}/bin/shark --service sharkserver2
 user=hadoop
 autostart=false
 autorestart=true
-stdout_logfile={{ spark_home }}/logs/sharkserver2.log
+stdout_logfile={{ shark_home }}/logs/sharkserver2.log
 redirect_stderr=true
