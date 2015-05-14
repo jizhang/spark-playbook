@@ -1,0 +1,12 @@
+---
+- name: install spark
+  unarchive: src=/opt/downloads/spark-1.3.1-bin-cdh4.tgz dest=/opt/ creates={{ spark_home }} copy=no
+
+- name: config sbin/spark-config.sh
+  template: src=spark-config.sh.j2 dest={{ spark_home }}/sbin/spark-config.sh mode=0755
+
+- name: config conf/spark-env.sh
+  template: src=spark-env.sh.j2 dest={{ spark_home }}/conf/spark-env.sh mode=0755
+
+- name: config conf/slaves
+  template: src=slaves.j2 dest={{ spark_home }}/conf/slaves

@@ -9,3 +9,8 @@
   roles:
     - common
     - streaming
+
+- hosts: mllib
+  roles:
+    - common
+    - mllib
