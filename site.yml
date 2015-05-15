@@ -1,16 +1,16 @@
 ---
-- hosts: spark
-  roles:
-    - common
-    - spark
-    - shark
+#- hosts: spark
+#  roles:
+#    - common
+#    - spark
+#    - shark
+#
+#- hosts: streaming
+#  roles:
+#    - common
+#    - streaming
 
-- hosts: streaming
-  roles:
-    - common
-    - streaming
-
-- hosts: mllib
+- hosts: [mllib-master, mllib-slave, mllib-gateway]
   roles:
     - common
     - mllib

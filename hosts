@@ -24,10 +24,15 @@ db20-050
 db20-051
 db20-052
 
-[mllib]
+[mllib-master]
 dw20-004
+
+[mllib-slave]
 db20-042
 db20-043
 db20-044
 db20-045
 db20-046
+
+[mllib-gateway]
+db20-040
