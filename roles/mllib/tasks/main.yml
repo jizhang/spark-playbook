@@ -12,4 +12,4 @@
   template: src=slaves.j2 dest={{ spark_home }}/conf/slaves
 
 - name: create local dir
-  file: path=/data/spark-tmp state=directory owner=hadoop group=hadoop
+  file: path=/data/spark-tmp state=directory mode=0777
